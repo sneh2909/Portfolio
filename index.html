@@ -30,14 +30,14 @@
     <title>Sneh Shah</title>    <!-- Change it your name  --> .
   </head>
   <body class="light" id="top">
-    <header class="header center">
+    <header class="header center" role="banner">
       <h3>
         <a href="https://www.linkedin.com/in/sneh-shah29/" class="link"  
           >{SS}. <!--insert your initials here --></a
         >
       </h3> <!--use the linkedIn or any link in above href-->
 
-      <nav class="nav center">
+      <nav class="nav center" role="navigation">
         <ul class="nav__list center">
           <li class="nav__list-item">
             <a class="link link--nav" href="#projects">Projects</a>
@@ -48,9 +48,9 @@
           <li class="nav__list-item">
             <a class="link link--nav" href="#Internship">Internship</a>
           </li>
-          <!--   <li class="nav__list-item">
+          <li class="nav__list-item">
             <a class="link link--nav" href="#Exp">Experience</a>
-          </li>-->
+          </li>
         </ul>
 
         <button type="button" aria-label="toggle theme" class="btn btn--icon">
@@ -67,45 +67,81 @@
       </nav>
     </header>
 
-    <main>
+    <main role="main">
       <!-- About -->
       <div class="about center">
         <h1>Hi, I am <span class="about__name">Sneh Shah.</span></h1>
         <h2 class="about__role">Aspiring Data Scientist</h2>
         <p class="about__desc"> <!-- Edit the About make sure you add your degree!-->
-          I am a highly motivated individual living in Bangalore, completing my Masters in Data Science from Christ University. With a competitive nature, I passionately solve problems and build things, showcasing excellent problem-solving skills and a proven ability to adapt quickly to new environments and technologies.
+          I am a highly motivated ML Engineer at Salesken.ai with a strong background in Data Science. With a competitive nature, I passionately solve problems and build AI solutions 🤖, showcasing excellent problem-solving skills and a proven ability to adapt quickly to new technologies 🚀.
         </p> <!-- about you -->
         <br>
         <a href="mailto:snehshah2901@gmail.com">Mail: snehshah2901@gmail.com </a><p> Contact: +91 9428911398</p>  <!--Change it to your mail id and contact no-->
       </br>
       
-
+        
         <div class="about__contact center">
           <a href="https://drive.google.com/file/d/1sn_d5r1Vujc77MF9yCI5TRD93WrNlEjA/view?usp=sharing" target="_blank"  > <!-- drive link for resume-->
             <span class="btn btn--outline">Resume</span> 
-          </a>
+            </a>
 
           <a
             href="https://github.com/sneh2909" target="_blank"
-            aria-label="github"
+               aria-label="github"
             class="link link--icon"
           >
-            <i aria-hidden="true" class="fab fa-github"></i>
+              <i aria-hidden="true" class="fab fa-github"></i>
           </a> <!-- Github profile Link-->
 
           <a
             href="https://www.linkedin.com/in/sneh-shah29/" target="_blank"  
-            aria-label="linkedin"
+               aria-label="linkedin"
             class="link link--icon"
           > 
-            <i aria-hidden="true" class="fab fa-linkedin"></i>
-          </a> <!-- LinledIn profile Link-->
+              <i aria-hidden="true" class="fab fa-linkedin"></i>
+            </a>
+          </div>
         </div>
-      </div>
+
+      <!-- Adding Experience Section -->
+      <section id="Exp" class="section experience" aria-labelledby="experience-title">
+        <h2 id="experience-title" class="section__title">Experience</h2>
+        <div class="projects__grid">
+          <div class="project">
+            <h3><strong>ML Engineer 1</strong></h3>
+            <p class="project__description">
+              <strong>Salesken.ai</strong>, Bengaluru, Karnataka<br>
+              <strong>Apr 2024–Present</strong><br>
+              <ul style="list-style-type: disc; padding-left: 20px; text-align: left;">
+                <li>Engineered an <strong>Email Generation System</strong> using LLM Agents with custom prompts and personalized responses for clients, improving custom email creation accuracy.</li>
+                <li>Designed a <strong>Knowledge Extractor System</strong> using RAG architecture, integrating web scraping, Azure services, and Kafka, enhancing data retrieval efficiency by <strong>25%</strong>.</li>
+                <li>Introduced a <strong>PII masking solution</strong> utilizing pseudonymization, anonymization, tokenization, and truncation techniques, ensuring compliance with data privacy regulations.</li>
+                <li>Constructed a <strong>DS Toolkit</strong> providing API endpoints for call duration analysis and deal/task summarization using LLM, increasing efficiency by <strong>40%</strong>.</li>
+                <li>Designed a <strong>Kafka Controller</strong> for efficient message handling, idempotency, reducing data duplication by <strong>15%</strong>.</li>
+                <li>Optimized the <strong>Whisper-ASR system</strong> and deployed it on the Triton Inference Server, reducing latency by <strong>25%</strong> and enhancing scalability.</li>
+              </ul>
+            </p>
+            <h4 style="margin-top: 15px;"><strong>Technologies:</strong></h4>
+            <ul class="project__stack">
+              <li class="project__stack-item">Python</li>
+              <li class="project__stack-item">LLM</li>
+              <li class="project__stack-item">Langchain</li>
+              <li class="project__stack-item">Azure</li>
+              <li class="project__stack-item">Kafka</li>
+              <li class="project__stack-item">Triton Inference Server</li>
+              <li class="project__stack-item">Kubernetes</li>
+              <li class="project__stack-item">VectorDB</li>
+              <li class="project__stack-item">MongoDB</li>
+              <li class="project__stack-item">Postgres</li>
+              <li class="project__stack-item">Streamlit</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
       <!-- Projects -->
-      <section id="projects" class="section projects">
-        <h2 class="section__title">Projects</h2>
+      <section id="projects" class="section projects" aria-labelledby="projects-title">
+        <h2 id="projects-title" class="section__title">Projects</h2>
 
         <div class="projects__grid">
           <div class="project">
@@ -207,8 +243,8 @@ Engineered a high-performance NST system with approximately 30% reduction in pro
         </div>
       </section>
 
-      <section id="Internship" class="section Internship" id="Internship">
-        <h2 class="section__title">Internships & Certifications</h2>
+      <section id="Internship" class="section Internship" aria-labelledby="internship-title">
+        <h2 id="internship-title" class="section__title">Internships & Certifications</h2>
       <div class="project">
         <h3>Saleken (ML Intern)</h3>
         <p class="project__description">
@@ -268,12 +304,62 @@ Engineered a high-performance NST system with approximately 30% reduction in pro
       </div>
     </div>
   </section>
- <!-- duplicate the above section and you can change it to paper or experience-->
 
+      <!-- Add Publications section -->
+      <section class="section publications" id="publications" aria-labelledby="publications-title">
+        <h2 id="publications-title" class="section__title">Publications</h2>
+        <div class="projects__grid">
+          <div class="project">
+            <h3>Comparative Performance Analysis of ML and DL Techniques in Pneumonia Detection</h3>
+            <p class="project__description">
+              • Published in 14th ICCCNT conference, IIT Delhi<br>
+              • Evaluated 6 ML and 3 DL algorithms for pneumonia detection<br>
+              • Designed CNN achieving 94.06% training and 89.74% testing accuracy
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">Deep Learning</li>
+              <li class="project__stack-item">CNN</li>
+              <li class="project__stack-item">Medical Imaging</li>
+            </ul>
+            <a
+              href="https://ieeexplore.ieee.org/abstract/document/10306711"
+              aria-label="live preview"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+            <br>
+          </div>
+        </div>
+      </section>
+
+      <!-- Add Education section -->
+      <section class="section education" id="education" aria-labelledby="education-title">
+        <h2 id="education-title" class="section__title">Education</h2>
+        <div class="projects__grid">
+          <div class="project">
+            <h3>Christ (Deemed to be University)</h3>
+            <p class="project__description">
+              Masters of Science (Data Science)<br>
+              Current GPA: 3.63/4<br>
+              Aug 2022 - Present<br>
+              Bengaluru, Karnataka
+            </p>
+          </div>
+          <div class="project">
+            <h3>Gujarat University</h3>
+            <p class="project__description">
+              Bachelors of Science (Data Science)<br>
+              GPA: 7.77/10<br>
+              Jun 2019 - May 2022<br>
+              Ahmedabad, Gujarat
+            </p>
+          </div>
+        </div>
+      </section>
       
-      
-      <section class="section skills" id="skills">
-        <h2 class="section__title">Skills</h2>
+      <section class="section skills" id="skills" aria-labelledby="skills-title">
+        <h2 id="skills-title" class="section__title">Skills</h2>
 
         <div class="projects__grid">
           <div class="project">
@@ -328,8 +414,21 @@ Engineered a high-performance NST system with approximately 30% reduction in pro
 
         
       </section>  
+      <!-- Add Certifications section -->
+      <section class="section certifications" id="certifications" aria-labelledby="certifications-title">
+        <h2 id="certifications-title" class="section__title">Certifications</h2>
+        <div class="projects__grid">
+          <div class="project">
+            <ul class="skills__list">
+              <li class="skills__list-item btn btn--plain">Machine Learning Specialization (Jun 2023)</li>
+              <li class="skills__list-item btn btn--plain">Data Science with Python (Oct 2022)</li>
+              <li class="skills__list-item btn btn--plain">Data Analysis with Python (Jul 2022)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <a
         href="" 
         class="link footer__link"

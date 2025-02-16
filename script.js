@@ -61,3 +61,16 @@ const scrollUp = () => {
 }
 
 document.addEventListener('scroll', scrollUp)
+
+const smoothScroll = (target) => {
+  document.querySelector(target).scrollIntoView({
+    behavior: 'smooth'
+  });
+};
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    smoothScroll(this.getAttribute('href'));
+  });
+});
