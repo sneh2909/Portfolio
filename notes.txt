@@ -1,0 +1,47 @@
+● Phase 1 is done. Here's the full picture:                                                                                                    
+                                                                                                                                             
+  ---                                                                                                                                        
+  What's live on the v2 branch                                                                                                                 
+                                                                                                                                               
+  Site (src/):                                                                                                                                 
+  - Dark theme hero with typing animation cycling through your roles + live green "Available" dot                                              
+  - Experience timeline — NoBroker MSOCA/Redis/RAG bullets + Salesken, with tech tags                                                          
+  - Projects — House M.D. as a featured card with glow, NCF + NST in a 2-col grid                                                              
+  - Skills categorized by group, Publications (IEEE), Education + Achievements + Certs (no duplicates)                                         
+  - Floating AMA bot with suggestion chips and honest fallback message                                                                         
+  - Sticky navbar, mobile hamburger, smooth scroll animations                                                                                  
+                                                                                                                                               
+  GitHub Actions (.github/workflows/deploy.yml):                                                                                               
+  - Triggers on every push to v2                                                                                                               
+  - Builds Next.js, pushes out/ to gh-pages branch                                                                                             
+                                                                                                                                               
+  ---                                                                                                                                          
+  Two things you need to do to go live                                                                                                         
+                                                                                                                                               
+  1. Change GitHub Pages source (one-time):                                                                                                    
+                                                                       
+  ▎ github.com/sneh2909/Portfolio → Settings → Pages → Source → branch: gh-pages → Save                                                        
+                                                                                                                                               
+  2. Deploy the AMA backend to HuggingFace (for the chat to actually work):                                                                    
+  cd /mnt/d/Work/Portfolio/ama-backend                                                                                                       
+  huggingface-cli login                                                                                                                        
+  git init && git add .                                                                    
+  git commit -m "initial deploy"                                                                                                               
+  git remote add space https://huggingface.co/spaces/SnehShah/portfolio-ama                                                                    
+  git push space main                                                                      
+  Then add GROQ_API_KEY as a Space secret in Settings. Once deployed, update the constant in src/components/AMABot.tsx:                        
+  const HF_SPACE_URL = "https://SnehShah-portfolio-ama.hf.space";                                                                              
+                                                                                                                                               
+  Note: The workflow fires on v2 pushes. If you later merge v2 → main you'll need to update the trigger branch in the workflow file.           
+             
+
+  Local testing                                                                                                                                
+                                                                                                                                               
+  Run this from /mnt/d/Work/Portfolio/:                                                                                                        
+                                                                                                                                               
+  export PATH="$PATH:/mnt/c/Program Files/nodejs"                                                                                              
+  npm run dev                                                                                                                                  
+                                                                                                                                               
+  Then open http://localhost:3000/Portfolio in your browser (the /Portfolio path is from the basePath setting).                                
+                                                                                                                                               
+  The dev server hot-reloads on file save, so you can edit any file in src/ and see changes instantly without rebuilding. 
