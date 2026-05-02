@@ -65,7 +65,7 @@ export default function Hero() {
             <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500" />
           </span>
           <span className="text-xs font-mono text-foreground-dim">
-            Available · ML Engineer @ NoBroker, Bengaluru
+            ML Engineer @ NoBroker, Bengaluru
           </span>
         </div>
 

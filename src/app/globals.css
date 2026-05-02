@@ -7,13 +7,45 @@
   --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
 }
 
+/* Dark theme (default) — RGB space-separated for Tailwind opacity modifiers */
+html.dark {
+  --color-background: 10 10 10;
+  --color-surface: 17 17 17;
+  --color-surface-2: 26 26 26;
+  --color-border: 38 38 38;
+  --color-accent: 34 211 238;
+  --color-accent-dim: 6 182 212;
+  --color-muted: 115 115 115;
+  --color-muted-2: 82 82 82;
+  --color-foreground: 229 229 229;
+  --color-foreground-dim: 163 163 163;
+  --color-scrollbar-thumb: 38 38 38;
+  --color-scrollbar-hover: 64 64 64;
+}
+
+/* Light theme — complements the cyan accent */
+html.light {
+  --color-background: 249 250 251;
+  --color-surface: 255 255 255;
+  --color-surface-2: 243 244 246;
+  --color-border: 229 231 235;
+  --color-accent: 8 145 178;
+  --color-accent-dim: 14 116 144;
+  --color-muted: 107 114 128;
+  --color-muted-2: 156 163 175;
+  --color-foreground: 17 17 17;
+  --color-foreground-dim: 55 65 81;
+  --color-scrollbar-thumb: 209 213 219;
+  --color-scrollbar-hover: 156 163 175;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #0a0a0a;
-  color: #e5e5e5;
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -21,13 +53,13 @@ body {
 
 ::selection {
   background-color: rgba(34, 211, 238, 0.25);
-  color: #e5e5e5;
+  color: rgb(var(--color-foreground));
 }
 
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #0a0a0a; }
-::-webkit-scrollbar-thumb { background: #262626; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #404040; }
+::-webkit-scrollbar-track { background: rgb(var(--color-background)); }
+::-webkit-scrollbar-thumb { background: rgb(var(--color-scrollbar-thumb)); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgb(var(--color-scrollbar-hover)); }
 
 .shimmer-text {
   background: linear-gradient(

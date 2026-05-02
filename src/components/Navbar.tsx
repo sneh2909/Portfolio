@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { personal } from "@/data/portfolio";
 import { cn } from "@/lib/utils";
+import ThemeToggle from "./ThemeToggle";
 
 const links = [
   { href: "#experience", label: "Experience" },
@@ -35,7 +36,7 @@ export default function Navbar() {
           href="#"
           className="font-mono text-accent text-sm font-semibold tracking-tight hover:opacity-80 transition-opacity"
         >
-          {personal.name.split(" ")[0].toLowerCase()}.sh
+          ss
         </a>
 
         {/* Desktop links */}
@@ -60,27 +61,33 @@ export default function Navbar() {
               Resume ↗
             </a>
           </li>
+          <li>
+            <ThemeToggle />
+          </li>
         </ul>
 
-        {/* Mobile menu button */}
-        <button
-          className="md:hidden text-foreground-dim hover:text-foreground"
-          onClick={() => setMobileOpen((v) => !v)}
-          aria-label="Toggle menu"
-        >
-          <svg
-            className="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
+        {/* Mobile: toggle + hamburger */}
+        <div className="md:hidden flex items-center gap-3">
+          <ThemeToggle />
+          <button
+            className="text-foreground-dim hover:text-foreground"
+            onClick={() => setMobileOpen((v) => !v)}
+            aria-label="Toggle menu"
           >
-            {mobileOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            )}
-          </svg>
-        </button>
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              {mobileOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
       </nav>
 
       {/* Mobile dropdown */}

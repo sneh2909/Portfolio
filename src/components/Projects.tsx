@@ -104,14 +104,16 @@ export default function Projects() {
                       <GitHubIcon />
                     </a>
                   )}
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted hover:text-accent transition-colors"
-                  >
-                    <ExternalIcon />
-                  </a>
+                  {project.url !== project.github && (
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted hover:text-accent transition-colors"
+                    >
+                      <ExternalIcon />
+                    </a>
+                  )}
                 </div>
               </div>
 

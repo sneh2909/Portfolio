@@ -28,7 +28,7 @@ export const experience = [
       "Fine-tuned Whisper and multilingual Conformer ASR and deployed on NVIDIA Riva and Triton, delivering sub-second multilingual transcription at production scale.",
       'Engineered a "Piggyback" end-of-call extraction emitting post-call analysis JSON in the agent\'s final turn, eliminating a separate analysis LLM call and cutting analytics cost to output tokens only.',
     ],
-    tags: ["LLM", "RAG", "Redis", "FastAPI", "Riva", "Triton", "Kafka", "ASR"],
+    tags: ["LLM", "RAG", "Redis", "Riva", "Triton", "TTS", "ASR", "Websocket", "GCS"],
   },
   {
     company: "Salesken.ai",
@@ -77,6 +77,21 @@ export const projects = [
     highlight: true,
   },
   {
+    title: "Conversational Voice AI",
+    period: "Apr – May 2024",
+    url: "https://github.com/sneh2909/Conversational-VoiceAI",
+    github: "https://github.com/sneh2909/Conversational-VoiceAI",
+    description:
+      "End-to-end real-time voice-to-voice AI system with human-like interaction via a low-latency ASR → LLM → TTS pipeline over full-duplex WebSockets.",
+    bullets: [
+      "Designed and built an end-to-end conversational voice AI system capable of real-time, human-like interaction.",
+      "Constructed a low-latency pipeline integrating APIs for Speech-to-Text, LLM inference (OpenAI/Groq), and Text-to-Speech.",
+      "Implemented using FastAPI and WebSockets for persistent, high-speed, full-duplex communication.",
+    ],
+    tags: ["FastAPI", "WebSockets", "ASR", "TTS", "LLM", "Groq", "Python"],
+    highlight: false,
+  },
+  {
     title: "Neural Collaborative Filtering",
     period: "Oct – Dec 2023",
     url: "https://github.com/sneh2909/Neural-Collaborative-Filtering",
@@ -105,6 +120,51 @@ export const projects = [
       "Showcased project on an interactive website.",
     ],
     tags: ["PyTorch", "Computer Vision", "VGG-19", "Optimization"],
+    highlight: false,
+  },
+  {
+    title: "Diabetic Retinopathy Detection",
+    period: "Jan – Jun 2022",
+    url: "https://github.com/sneh2909/diabetic-retinopathy",
+    github: "https://github.com/sneh2909/diabetic-retinopathy",
+    description:
+      "CNN-powered retinal image classifier combining deep feature extraction with 5 ML/DL algorithms, achieving 92% accuracy and 27% reduction in false negatives.",
+    bullets: [
+      "Developed a predictive model using a CNN to extract features from retinal images.",
+      "Implemented 5 ML and DL algorithms for classification.",
+      "Achieved 92% classification accuracy and reduced false negatives by 27%, enabling reliable early diagnosis.",
+    ],
+    tags: ["Python", "TensorFlow", "OpenCV", "CNN", "Computer Vision"],
+    highlight: false,
+  },
+  {
+    title: "Credit Card Fraud Detection",
+    period: "May – Nov 2021",
+    url: "https://github.com/sneh2909/CreditCardFraudDetection",
+    github: "https://github.com/sneh2909/CreditCardFraudDetection",
+    description:
+      "Fraud detection system on 284,807 transactions using feature engineering and ensemble learning, achieving 95% accuracy with a random forest classifier.",
+    bullets: [
+      "Processed a dataset with 31 features and 284,807 transactions.",
+      "Performed feature engineering and ensemble learning to achieve 95% accuracy in detecting fraudulent transactions.",
+      "Classified transactions into fraudulent and safe segments using a random forest classifier.",
+    ],
+    tags: ["Python", "Scikit-Learn", "Ensemble Learning", "Feature Engineering"],
+    highlight: false,
+  },
+  {
+    title: "Weather Data Analysis",
+    period: "Aug – Oct 2020",
+    url: "https://github.com/sneh2909/weather-data",
+    github: "https://github.com/sneh2909/weather-data",
+    description:
+      "Unsupervised analysis of 25 weather features using 3 clustering techniques, improving data accuracy by 15% through preprocessing pipelines and visualizations.",
+    bullets: [
+      "Leveraged 3 unsupervised learning techniques to discover hidden patterns in unlabeled data.",
+      "Analyzed and visualized 25 weather features through comprehensive data exploration.",
+      "Improved data accuracy by 15% through preprocessing pipelines and insightful visualizations.",
+    ],
+    tags: ["Python", "Scikit-Learn", "Unsupervised Learning", "Data Visualization"],
     highlight: false,
   },
 ];
@@ -166,6 +226,12 @@ export const achievements = [
     period: "Jan 2026",
     url: "https://drive.google.com/file/d/1xUls_00MpjDU6j2PbVNfKPHKCSXP-4Sn/view?usp=sharing",
   },
+  {
+    title: "1st Place — Mathematics Excellence 2020",
+    description: "Secured 1st position in Mathematics Excellence competition organized by Gujarat University.",
+    period: "Feb 2020",
+    url: "https://drive.google.com/file/d/19Zuh__bDPyVKfI9xDjAZbmCkeCzeMWRR/view?usp=sharing",
+  },
 ];
 
 export const certifications = [
@@ -180,5 +246,11 @@ export const certifications = [
     issuer: "Coursera",
     period: "Jun 2023",
     url: "https://www.coursera.org/account/accomplishments/specialization/certificate/KHGLRMMQE8E8",
+  },
+  {
+    title: "Data Analysis with Python",
+    issuer: "freeCodeCamp",
+    period: "Jul 2022",
+    url: "https://www.freecodecamp.org/certification/snehshah/data-analysis-with-python-v7",
   },
 ];
