@@ -73,7 +73,7 @@
         <h1>Hi, I am <span class="about__name">Sneh Shah.</span></h1>
         <h2 class="about__role">Aspiring Data Scientist</h2>
         <p class="about__desc"> <!-- Edit the About make sure you add your degree!-->
-          I am a highly motivated ML Engineer at Salesken.ai with a strong background in Data Science. With a competitive nature, I passionately solve problems and build AI solutions 🤖, showcasing excellent problem-solving skills and a proven ability to adapt quickly to new technologies 🚀.
+          I am a Machine Learning Engineer at NoBroker (Convozen.ai), building production conversational AI — multi-agent LLM orchestration, multilingual ASR, memory-management services, and RL post-training. I love turning research into shipped, measurable AI products 🤖🚀.
         </p> <!-- about you -->
         <br>
         <a href="mailto:snehshah2901@gmail.com">Mail: snehshah2901@gmail.com </a><p> Contact: +91 9428911398</p>  <!--Change it to your mail id and contact no-->
@@ -81,7 +81,7 @@
       
         
         <div class="about__contact center">
-          <a href="https://drive.google.com/file/d/1sn_d5r1Vujc77MF9yCI5TRD93WrNlEjA/view?usp=sharing" target="_blank"  > <!-- drive link for resume-->
+          <a href="https://drive.google.com/file/d/18uDNAE2ElyrohW2zVu7tkJNNhpmKTH-K/view?usp=sharing" target="_blank"  > <!-- drive link for resume-->
             <span class="btn btn--outline">Resume</span> 
             </a>
 
@@ -108,10 +108,41 @@
         <h2 id="experience-title" class="section__title">Experience</h2>
         <div class="projects__grid">
           <div class="project">
+            <h3><strong>Machine Learning Engineer</strong></h3>
+            <p class="project__description">
+              <strong>NoBroker (Convozen.ai)</strong>, Bengaluru, Karnataka<br>
+              <strong>Jul 2025–Present</strong><br>
+              <ul style="list-style-type: disc; padding-left: 20px; text-align: left;">
+                <li>Engineered and deployed end-to-end <strong>Chatbot</strong> and <strong>Email Co-Pilot</strong> agent harness powering live multi-channel conversational AI in production.</li>
+                <li>Architected <strong>MSOCA</strong> (Multi-Session + Omni-Channel Architecture) with a unified Agent-User-Context, sharing state across Voice, Chat, and WhatsApp via single-active-focus arbitration.</li>
+                <li>Migrated session state from MongoDB to <strong>Redis</strong> under a hot/cold pattern with write-behind flush, cutting per-turn I/O by <strong>50–150 ms</strong> to meet voice TTFB budgets.</li>
+                <li>Built a standalone <strong>Memory Management Service</strong> (FastAPI) with pluggable Redis, Mongo, and Vector backends; rolling-window summarization and RAG retrieval reduced effective prompt size by <strong>30–40%</strong>.</li>
+                <li>Fine-tuned <strong>Whisper</strong> and <strong>multilingual Conformer</strong> ASR and deployed on NVIDIA Riva and Triton, delivering sub-second multilingual transcription at production scale.</li>
+                <li>Engineered a <strong>"Piggyback" end-of-call extraction</strong> emitting post-call analysis JSON in the agent's final turn, eliminating a separate analysis LLM call and cutting analytics cost to output tokens only.</li>
+              </ul>
+            </p>
+            <h4 style="margin-top: 15px;"><strong>Technologies:</strong></h4>
+            <ul class="project__stack">
+              <li class="project__stack-item">Python</li>
+              <li class="project__stack-item">PyTorch</li>
+              <li class="project__stack-item">FastAPI</li>
+              <li class="project__stack-item">LLM</li>
+              <li class="project__stack-item">Multi-Agent</li>
+              <li class="project__stack-item">RAG</li>
+              <li class="project__stack-item">Redis</li>
+              <li class="project__stack-item">MongoDB</li>
+              <li class="project__stack-item">VectorDB</li>
+              <li class="project__stack-item">Riva</li>
+              <li class="project__stack-item">Triton</li>
+              <li class="project__stack-item">Kubernetes</li>
+              <li class="project__stack-item">WebSocket</li>
+            </ul>
+          </div>
+          <div class="project">
             <h3><strong>ML Engineer 1</strong></h3>
             <p class="project__description">
               <strong>Salesken.ai</strong>, Bengaluru, Karnataka<br>
-              <strong>Apr 2024–Present</strong><br>
+              <strong>Apr 2024–Jun 2025</strong><br>
               <ul style="list-style-type: disc; padding-left: 20px; text-align: left;">
                 <li>Engineered an <strong>Email Generation System</strong> using LLM Agents with custom prompts and personalized responses for clients, improving custom email creation accuracy.</li>
                 <li>Designed a <strong>Knowledge Extractor System</strong> using RAG architecture, integrating web scraping, Azure services, and Kafka, enhancing data retrieval efficiency by <strong>25%</strong>.</li>
@@ -144,6 +175,84 @@
         <h2 id="projects-title" class="section__title">Projects</h2>
 
         <div class="projects__grid">
+          <div class="project">
+            <h3>House M.D. — Clinical Reasoning RL Environment</h3>
+            <p class="project__description">
+              Built a POMDP emergency-department simulator with 15 conditions and 75 actions, deployed as a Hugging Face Space on Meta's OpenEnv contract. Post-trained Gemma-3-4B-IT as a sequential diagnostician via SFT (Unsloth + TRL) and a custom GRPO loop with 4 LoRA adapters published to the HF Hub. Designed a 5-rubric reward (accuracy, cost, anchoring, safety, format) with shaping that mitigates reward-hacking failure modes. Evaluated on a 45-patient holdout against random, greedy, base, and Gemini Flash baselines with W&amp;B-tracked reward curves.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">Python</li>
+              <li class="project__stack-item">Reinforcement Learning</li>
+              <li class="project__stack-item">POMDP</li>
+              <li class="project__stack-item">GRPO</li>
+              <li class="project__stack-item">SFT</li>
+              <li class="project__stack-item">Unsloth</li>
+              <li class="project__stack-item">TRL</li>
+              <li class="project__stack-item">Gemma-3</li>
+              <li class="project__stack-item">Hugging Face</li>
+              <li class="project__stack-item">Weights &amp; Biases</li>
+              <li class="project__stack-item">OpenEnv</li>
+            </ul>
+            <a
+              href="https://huggingface.co/spaces/SnehShah/house-md-env" target="_blank"
+              aria-label="live preview"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+            <a
+              href="https://github.com/sneh2909/Overfitters" target="_blank"
+              aria-label="source code"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+          </div>
+
+          <div class="project">
+            <h3>Conversational Voice AI</h3>
+            <p class="project__description">
+              Designed and built an end-to-end conversational voice AI system capable of real-time, human-like interaction. Constructed a low-latency pipeline integrating ASR, LLM inference (OpenAI / Groq), and TTS, served over FastAPI and WebSockets for persistent, full-duplex communication.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">Python</li>
+              <li class="project__stack-item">FastAPI</li>
+              <li class="project__stack-item">WebSockets</li>
+              <li class="project__stack-item">LLM</li>
+              <li class="project__stack-item">STT</li>
+              <li class="project__stack-item">TTS</li>
+              <li class="project__stack-item">Real-Time</li>
+            </ul>
+            <a
+              href="https://github.com/sneh2909/Conversational-VoiceAI" target="_blank"
+              aria-label="source code"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+          </div>
+
+          <div class="project">
+            <h3>Neural Collaborative Filtering</h3>
+            <p class="project__description">
+              Developed a recommendation system using Neural Collaborative Filtering, achieving a 20% improvement in recommendation accuracy. Integrated Gradio for an interactive UI and produced a novel scoring equation that combines user-specific preferences with IMDb rankings.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">Python</li>
+              <li class="project__stack-item">PyTorch</li>
+              <li class="project__stack-item">Recommender Systems</li>
+              <li class="project__stack-item">Deep Learning</li>
+              <li class="project__stack-item">Gradio</li>
+            </ul>
+            <a
+              href="https://github.com/sneh2909/Neural-Collaborative-Filtering" target="_blank"
+              aria-label="source code"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+          </div>
+
           <div class="project">
             <h3>Neural Style Transfer</h3> <!--Peoject Title -->
             <p class="project__description">
@@ -379,11 +488,23 @@ Engineered a high-performance NST system with approximately 30% reduction in pro
             
             <ul class="skills__list">
               <li class="skills__list-item btn btn--plain">Git</li>
+              <li class="skills__list-item btn btn--plain">Docker</li>
+              <li class="skills__list-item btn btn--plain">Kubernetes</li>
+              <li class="skills__list-item btn btn--plain">Hugging Face</li>
+              <li class="skills__list-item btn btn--plain">Weights &amp; Biases</li>
+              <li class="skills__list-item btn btn--plain">Triton</li>
+              <li class="skills__list-item btn btn--plain">Riva</li>
+              <li class="skills__list-item btn btn--plain">Redis</li>
+              <li class="skills__list-item btn btn--plain">MongoDB</li>
+              <li class="skills__list-item btn btn--plain">Postgres</li>
+              <li class="skills__list-item btn btn--plain">VectorDB</li>
+              <li class="skills__list-item btn btn--plain">Kafka</li>
+              <li class="skills__list-item btn btn--plain">LangChain</li>
+              <li class="skills__list-item btn btn--plain">Azure</li>
+              <li class="skills__list-item btn btn--plain">AWS</li>
               <li class="skills__list-item btn btn--plain">Tableau</li>
               <li class="skills__list-item btn btn--plain">PowerBI</li>
               <li class="skills__list-item btn btn--plain">Weka</li>
-              <li class="skills__list-item btn btn--plain">MS Excel</li>
-              <li class="skills__list-item btn btn--plain">AWS</li>
           </ul>
 
           </div>
@@ -392,28 +513,49 @@ Engineered a high-performance NST system with approximately 30% reduction in pro
             <h3>Libraries</h3>
             
             <ul class="skills__list">
+              <li class="skills__list-item btn btn--plain">PyTorch</li>
+              <li class="skills__list-item btn btn--plain">TensorFlow</li>
+              <li class="skills__list-item btn btn--plain">Transformers</li>
+              <li class="skills__list-item btn btn--plain">TRL</li>
+              <li class="skills__list-item btn btn--plain">Unsloth</li>
               <li class="skills__list-item btn btn--plain">Scikit-Learn</li>
               <li class="skills__list-item btn btn--plain">NumPy</li>
               <li class="skills__list-item btn btn--plain">Pandas</li>
               <li class="skills__list-item btn btn--plain">OpenCV</li>
-              <li class="skills__list-item btn btn--plain">TensorFlow</li>
+              <li class="skills__list-item btn btn--plain">FastAPI</li>
+              <li class="skills__list-item btn btn--plain">Pydantic</li>
               <li class="skills__list-item btn btn--plain">Keras</li>
-              <li class="skills__list-item btn btn--plain">Pytorch</li>
               <li class="skills__list-item btn btn--plain">Matplotlib</li>
               <li class="skills__list-item btn btn--plain">Seaborn</li>
-              <li class="skills__list-item btn btn--plain">Transformers</li>
               <li class="skills__list-item btn btn--plain">Spacy</li>
               <li class="skills__list-item btn btn--plain">NLTK</li>
-            
+
           </ul>
 
           </div>
 
-          
+          <div class="project">
+            <h3>ML &amp; DS Concepts</h3>
+
+            <ul class="skills__list">
+              <li class="skills__list-item btn btn--plain">Reinforcement Learning</li>
+              <li class="skills__list-item btn btn--plain">GRPO</li>
+              <li class="skills__list-item btn btn--plain">SFT</li>
+              <li class="skills__list-item btn btn--plain">RLHF</li>
+              <li class="skills__list-item btn btn--plain">LLM Post-training</li>
+              <li class="skills__list-item btn btn--plain">RAG</li>
+              <li class="skills__list-item btn btn--plain">Multi-Agent Systems</li>
+              <li class="skills__list-item btn btn--plain">ASR / TTS</li>
+              <li class="skills__list-item btn btn--plain">Recommender Systems</li>
+              <li class="skills__list-item btn btn--plain">Computer Vision</li>
+              <li class="skills__list-item btn btn--plain">A/B Testing</li>
+            </ul>
+          </div>
+
         </div>
 
-        
-      </section>  
+
+      </section>
       <!-- Add Certifications section -->
       <section class="section certifications" id="certifications" aria-labelledby="certifications-title">
         <h2 id="certifications-title" class="section__title">Certifications</h2>
