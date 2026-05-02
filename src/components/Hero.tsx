@@ -4,9 +4,7 @@ import { personal } from "@/data/portfolio";
 
 const roles = [
   "Machine Learning Engineer",
-  "Conversational AI Builder",
-  "RL Post-Training Enthusiast",
-  "ASR Systems Developer",
+  "Data Scientist"
 ];
 
 function TypingText() {
